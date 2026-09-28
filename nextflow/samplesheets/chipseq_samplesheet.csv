@@ -1,0 +1,9 @@
+sample,fastq_1,fastq_2,replicate,antibody,control,control_replicate
+ChIP_Untreated_T-bet,data/fastq/chipseq/SRR24015703.fastq.gz,,1,Tbet,ChIP_Untreated_Input,1
+ChIP_IL-12_T-bet,data/fastq/chipseq/SRR24015702.fastq.gz,,1,Tbet,ChIP_IL-12_Input,1
+ChIP_IL-12_ACBI1_T-bet,data/fastq/chipseq/SRR24015699.fastq.gz,,1,Tbet,ChIP_IL-12_ACBI1_Input,1
+ChIP_IL-12_BRM014_T-bet,data/fastq/chipseq/SRR24015698.fastq.gz,,1,Tbet,ChIP_IL-12_BRM014_Input,1
+ChIP_Untreated_Input,data/fastq/chipseq/SRR24015700.fastq.gz,,1,,,
+ChIP_IL-12_Input,data/fastq/chipseq/SRR24015697.fastq.gz,,1,,,
+ChIP_IL-12_ACBI1_Input,data/fastq/chipseq/SRR24015701.fastq.gz,,1,,,
+ChIP_IL-12_BRM014_Input,data/fastq/chipseq/SRR24015696.fastq.gz,,1,,,

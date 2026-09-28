@@ -1,0 +1,33 @@
+# Processed-data bundle (fetched by `make fetch-data`) and all regenerated outputs
+bundle/
+results/*
+!results/reference/
+figures/
+
+# Raw data and references (see DATA_ACCESS.md)
+data/fastq/
+data/reference/
+data/geo_processed/
+*.bam
+*.bai
+*.bw
+*.bigwig
+*.fastq.gz
+*.fq.gz
+*.sra
+*.RData
+*.rds
+
+# Nextflow runtime
+.nextflow/
+.nextflow.log*
+work/
+work_*/
+
+# R / Python
+.Rhistory
+.Rproj.user/
+__pycache__/
+
+# third-party workflow checkouts (extended_analysis/scripts/atac_trajectories/01_timecourse_patterns.sh)
+external/

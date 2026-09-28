@@ -1,0 +1,56 @@
+# Processed-data bundle manifest: repository-relative glob <TAB> action <TAB> note
+# action: copy = copy as is
+# Everything here is an INPUT to `make figures|extensions|meta` that cannot be
+# rebuilt without BAMs, bigWigs, the genome FASTA or external tools.
+#
+# --- McDonald 2023: nf-core outputs ------------------------------------------
+results/atac/bowtie2/merged_replicate/macs2/narrow_peak/consensus/consensus_peaks.mRp.clN.featureCounts.txt	copy	ATAC consensus peak x library counts
+results/atac/bowtie2/merged_replicate/macs2/narrow_peak/consensus/consensus_peaks.mRp.clN.featureCounts.txt.summary	copy	total counted reads per library (total-read size factors)
+results/atac/bowtie2/merged_replicate/macs2/narrow_peak/consensus/consensus_peaks.mRp.clN.saf	copy	consensus peak coordinates
+results/atac/bowtie2/merged_replicate/macs2/narrow_peak/consensus/consensus_peaks.mRp.clN.bed	copy	consensus peak coordinates
+results/atac/bowtie2/merged_replicate/macs2/narrow_peak/consensus/consensus_peaks.mRp.clN.boolean.txt	copy	per-condition peak calls
+results/atac/bowtie2/merged_replicate/bigwig/scale/*.txt	copy	bigWig scale factors
+results/rnaseq/star_salmon/salmon.merged.gene_counts.tsv	copy	RNA gene counts
+results/cutrun/03_peak_calling/04_called_peaks/macs2/*.narrowPeak	copy	CUT&RUN MACS2 peaks
+results/cutrun/03_peak_calling/04_called_peaks/seacr/*.bed	copy	CUT&RUN SEACR peaks
+results/chipseq/bowtie2/merged_library/macs3/narrow_peak/*.narrowPeak	copy	T-bet ChIP peaks
+# --- precomputed heavy steps -----------------------------------------------
+results/extended_analysis/footprinting/bindetect/bindetect_results.txt	copy	TOBIAS BINDetect
+results/extended_analysis/footprinting/bindetect/bindetect_distances.txt	copy	TOBIAS BINDetect
+results/extended_analysis/chromvar/chromvar_dose.RData	copy	chromVAR deviations
+results/extended_analysis/het_dose_response/homer_motifs/**/knownResults.txt	copy	HOMER known motifs (dose classes)
+results/extended_analysis/het_dose_response/homer_motifs/**/homerResults/motif[0-9].motif	copy	HOMER de novo motifs (dose classes)
+results/chipseq/motifs/**/knownResults.txt	copy	HOMER motifs at T-bet peaks
+results/extended_analysis/motif_grammar/spamo/*/spamo.tsv	copy	SpaMo spacing results
+results/extended_analysis/motif_grammar/spamo_all_results.csv	copy	SpaMo summary
+# --- paper-panel precompute (scripts/paper/*.sh; heavy, need bigWigs/FASTA) ---
+results/paper/homer/annotation/*.annotatePeaks.txt	copy	Fig 1C HOMER annotation
+results/paper/homer/overlap/fig1d.*.matrix.txt	copy	Fig 1D mergePeaks obs/exp
+results/paper/homer/motifs/*/knownResults.txt	copy	Fig 1F / S1C motifs
+results/paper/deeptools/*.tab	copy	Fig 1B / 2E / 2F profiles
+results/paper/deeptools/fig1a.mat.gz	copy	Fig 1A matrix (re-plot without bigWigs)
+results/paper/deeptools/fig2d.mat.gz	copy	Fig 2D matrix
+results/paper/fig5a_homer/*/knownResults.txt	copy	Fig 5A motifs
+results/paper/signal/*.gz	copy	Fig 4C/5C/5D/5H/5J deepTools matrices
+results/paper/fig6a_gene_tss.tsv.gz	copy	Fig 6A TSS cache (GENCODE vM35)
+results/paper/fig6a_motif_hits.rds	copy	Fig 6A peak x motif matches (JASPAR2020)
+# --- Guo et al. 2022 ----------------------------------------------------------
+results/meta_analysis/guo2022/atacseq/bowtie2/merged_library/macs2/narrow_peak/consensus/consensus_peaks.mLb.clN.featureCounts.txt	copy	Guo ATAC counts (per library)
+results/meta_analysis/guo2022/atacseq/bowtie2/merged_replicate/macs2/narrow_peak/consensus/consensus_peaks.mRp.clN.featureCounts.txt	copy	Guo ATAC counts
+results/meta_analysis/guo2022/atacseq/bowtie2/merged_*/macs2/narrow_peak/consensus/*.saf	copy	Guo consensus peaks
+results/meta_analysis/guo2022/rnaseq/star_salmon/salmon.merged.gene_counts.tsv	copy	Guo RNA gene counts
+results/extended_analysis/guo2022/atacseq/differential/summit_requant/summit_counts.rds	copy	summit-recentred counts (needs BAMs to rebuild)
+results/extended_analysis/guo2022/atacseq/differential/summit_requant/summit_consensus_501bp.bed	copy	summit-recentred peak set
+results/extended_analysis/guo2022/**/diffbind216/dba_counted.rds	copy	DiffBind 2.16 counted object (avoids BAMs)
+results/annotation/gencode.vM35.txdb.sqlite	copy	GENCODE vM35 TxDb (annotation without the GTF)
+results/extended_analysis/motif_grammar/grammar_*.rds	copy	matched window sets (needs genome FASTA to rebuild)
+results/extended_analysis/motif_grammar/*.fa	copy	class sequences for SpaMo
+results/extended_analysis/motif_grammar/balance_*.csv	copy	matching balance
+results/extended_analysis/motif_grammar/motifs/*	copy	JASPAR MEME motifs
+results/extended_analysis/atac_trajectories/motifs/comparisons.tsv	copy	motif comparisons (SEA needs the genome FASTA to rebuild)
+results/extended_analysis/atac_trajectories/motifs/region_set_sizes.tsv	copy	motif region set sizes
+results/extended_analysis/atac_trajectories/motifs/beds/*.bed	copy	200 bp motif region sets
+results/extended_analysis/atac_trajectories/motifs/sea/*/sea.tsv	copy	SEA results, JASPAR2024 (lost vs kept, vs static)
+results/chipseq/motifs/*/homerMotifs.all.motifs	copy	HOMER de novo motifs at T-bet peaks (figures/tbet_motifs.R)
+results/extended_analysis/atac_trajectories/glmnet/motif_match_cache.rds	copy	glmnet peak x motif matches + GC/CpG/promoter covariates (needs genome FASTA to rebuild)
+results/extended_analysis/atac_trajectories/glmnet/homer/*/knownResults.txt	copy	HOMER known motifs on the glmnet region sets

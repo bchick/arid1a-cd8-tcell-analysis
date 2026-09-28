@@ -1,0 +1,18 @@
+category	tool	version	notes
+workflow	Nextflow	25.10.0	
+pipeline	nf-core/atacseq	2.1.2	Bowtie2 + MACS2 narrow peaks; consensus featureCounts
+pipeline	nf-core/rnaseq	3.22.2	STAR + Salmon (--aligner star_salmon)
+pipeline	nf-core/cutandrun	3.2.2	Bowtie2; MACS2 + SEACR; no spike-in
+pipeline	nf-core/chipseq	2.1.0	Bowtie2; MACS3 narrow peaks
+reference	GRCm39 / GENCODE	vM35	primary assembly
+aligner	Bowtie2	2.5.2	
+aligner	STAR	2.7.11a	
+tool	samtools	1.13	
+tool	bedtools	2.30.0	
+tool	MACS2	2.2.9.1	
+tool	MACS3	3.0.2	
+tool	deepTools	3.5.4	
+tool	TOBIAS	0.16.1	footprinting (ATACorrect, ScoreBigwig, BINDetect)
+tool	HOMER	5.1	findMotifsGenome.pl, mergePeaks, annotatePeaks.pl
+tool	MEME suite	5.5.4	SpaMo (motif grammar)
+language	R	4.4.2	package versions in renv.lock

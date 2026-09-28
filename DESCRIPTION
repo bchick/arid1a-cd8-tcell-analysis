@@ -1,0 +1,22 @@
+Package: arid1a.cd8.tcell.analysis
+Title: Reanalysis of cBAF/ARID1A in CD8+ T Cell Differentiation
+Version: 1.0.0
+Authors@R: person("Brent Y.", "Chick", role = c("aut", "cre"))
+Description: Analysis code reproducing McDonald, Chick et al. (2023) Immunity
+    56:1303 from raw sequencing data, with extensions. Not an installable
+    package; this file declares R dependencies for renv.
+License: MIT + file LICENSE
+Encoding: UTF-8
+Imports:
+    AnnotationDbi, apeglm, Biobase, BiocParallel, Biostrings, ChIPseeker,
+    chromVAR, circlize, cluster, clusterProfiler, ComplexHeatmap, cowplot,
+    data.table, DEGreport, DESeq2, DiffBind, dplyr, EnhancedVolcano,
+    factoextra, fgsea, forcats, GenomicFeatures, GenomicRanges, ggalluvial,
+    ggforce, ggplot2, ggrepel, ggseqlogo, ggvenn, glmnet, here, igraph,
+    JASPAR2020, jsonlite, Matrix, matrixStats, Mfuzz, motifmatchr, msigdbr,
+    org.Mm.eg.db, patchwork, png, purrr, RColorBrewer, readr, Rsamtools,
+    Rsubread, rtracklayer, scales, stringr, SummarizedExperiment, TFBSTools,
+    tibble, tidyr, tidyverse, txdbmaker, universalmotif, viridis, viridisLite,
+    yaml
+Suggests:
+    TxDb.Mmusculus.UCSC.mm39.knownGene

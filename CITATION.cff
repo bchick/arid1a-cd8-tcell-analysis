@@ -1,0 +1,66 @@
+cff-version: 1.2.0
+message: >-
+  If you use this code or the bundled processed data, please cite the original
+  publication below and this repository.
+title: "arid1a-cd8-tcell-analysis: reproducible reanalysis of cBAF/ARID1A in CD8+ T cell differentiation"
+type: software
+authors:
+  - family-names: Chick
+    given-names: Brent Y.
+    affiliation: Salk Institute for Biological Studies
+repository-code: "https://github.com/bchick/arid1a-cd8-tcell-analysis"
+license: MIT
+version: 1.0.0
+keywords:
+  - ARID1A
+  - cBAF
+  - SWI/SNF
+  - CD8 T cells
+  - ATAC-seq
+  - CUT&RUN
+  - RNA-seq
+  - nf-core
+preferred-citation:
+  type: article
+  title: "Canonical BAF complex activity shapes the enhancer landscape that licenses CD8+ T cell effector and memory fates"
+  authors:
+    - family-names: McDonald
+      given-names: Bryan
+    - family-names: Chick
+      given-names: Brent Y.
+    - family-names: Ahmed
+      given-names: Nasiha S.
+    - family-names: Burns
+      given-names: Mannix
+    - family-names: Ma
+      given-names: Shixin
+    - family-names: Casillas
+      given-names: Eduardo
+    - family-names: Chen
+      given-names: Dan
+    - family-names: Mann
+      given-names: Thomas H.
+    - family-names: "O'Connor"
+      given-names: Carolyn
+    - family-names: Hah
+      given-names: Nasun
+    - family-names: Hargreaves
+      given-names: Diana C.
+    - family-names: Kaech
+      given-names: Susan M.
+  journal: Immunity
+  volume: 56
+  issue: 6
+  start: 1303
+  end: 1319
+  year: 2023
+  doi: 10.1016/j.immuni.2023.05.005
+references:
+  - type: software
+    title: "timecourse-patterns"
+    authors:
+      - family-names: Chick
+        given-names: Brent Y.
+    repository-code: "https://github.com/bchick/timecourse-patterns"
+    commit: 087f02b806138cdba58ec5b4d56db6424df631ec
+    license: MIT
